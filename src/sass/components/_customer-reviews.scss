@@ -1,0 +1,142 @@
+.customer-reviews {
+  min-width: 0;
+  background-color: transparent;
+  padding-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 100px;
+  }
+  .container {
+    min-width: 0;
+  }
+}
+
+.customer-reviews__image {
+  margin: auto;
+  margin-bottom: 28px;
+  border-radius: 50%;
+}
+.customer-reviews__comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  min-height: 256px;
+  height: 100%;
+  margin-bottom: 32px;
+  padding: 34px 39px;
+  border-radius: 10px;
+  line-height: calc(31 / 12);
+  text-align: center;
+
+  background-color: var(--color-green-main);
+
+  @media screen and (min-width: 768px) {
+    padding: 29px 80px;
+    min-height: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(26 / 14);
+    text-align: center;
+    letter-spacing: var(--lt-sp-main);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 39px 109px;
+    // margin-left: 100px;
+    // margin-right: 100px;
+  }
+}
+
+.slider-container {
+  margin: 0 20px;
+}
+.clients__slider {
+  max-width: 408px;
+  min-width: 279px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    max-width: none;
+    width: 704px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1013px;
+  }
+}
+
+.customer-reviews__info {
+  color: var(--color-black-main);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(37 / 20);
+  text-align: center;
+  margin-bottom: 14px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+
+    font-size: 16px;
+    line-height: calc(30 / 16);
+  }
+}
+.clients__slider-wrapper {
+}
+
+.customer-reviews__radio-list {
+  position: relative;
+  top: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+.swiper-pagination-bullet {
+  position: static;
+  display: block;
+  margin: 0 !important;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  color: var(--color-gray-buttons);
+  @extend %animation-style;
+  transition-property: background-color;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-green-main);
+}
+
+// .customer-reviews__radio {
+//   position: absolute;
+//   visibility: hidden;
+//   width: 0;
+//   height: 0;
+
+//   &:checked + .customer-reviews__radio-replace {
+//     background-color: var(--color-green-main);
+//   }
+// }
+
+// .customer-reviews__radio-replace {
+//   width: 12px;
+//   height: 12px;
+//   border-radius: 50%;
+//   background-color: var(--color-gray-buttons);
+
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
+
+// .clients__slider {
+// width: 100%;
+// height: 600px;
+// }

@@ -1,0 +1,199 @@
+%button-style-main {
+  background-color: var(--color-yellow-main);
+  &:hover {
+    background-color: var(--color-green-button);
+  }
+
+  &:focus {
+    color: var(--color-white-main);
+    background-color: var(--color-green-button);
+  }
+
+  &:disabled {
+    background-color: var(--color-grey-main);
+  }
+}
+%button-style-secondary {
+  border: 2px solid var(--color-yellow-main);
+  background-color: transparent;
+  color: var(--color-black-main);
+
+  &:hover {
+    border-color: var(--color-green-button);
+  }
+
+  &:focus {
+    color: var(--color-white-main);
+    border-color: var(--color-green-button);
+  }
+
+  &:disabled {
+    border-color: var(--color-grey-main);
+  }
+}
+
+.link {
+  transition-property: color;
+  @extend %animation-style;
+
+  &.products__link {
+    @extend %button-style-secondary;
+
+    padding: 4px 11px;
+    font-size: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-black-main);
+    font-weight: 600;
+
+    @media screen and (min-width: 1200px) {
+      padding: 12px 34px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: calc(18 / 14);
+
+      border-radius: 10px;
+    }
+  }
+}
+
+.button {
+  @extend %animation-style;
+  transition-property: background-color, border, color;
+  padding: 12px 34px;
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+
+  color: var(--color-black-main);
+
+  border-radius: 10px;
+
+  outline: none;
+  border: none;
+
+  &.read-more__button {
+    @extend %button-style-main;
+  }
+
+  &.location__button {
+    width: 196px;
+    @extend %button-style-main;
+
+    .arrow-one {
+      margin-left: 10px;
+    }
+  }
+
+  &.franchise__button {
+    width: 196px;
+    // в падинге не был учтен размер бордера на кнопке.
+    padding: 10px 32px;
+    @extend %button-style-secondary;
+
+    .arrow-one {
+      margin-left: 10px;
+    }
+  }
+
+  &.buy__button {
+    @extend %button-style-main;
+  }
+}
+
+.link {
+  &.about-info-link {
+    font-weight: 600;
+    font-size: 8px;
+    line-height: calc(9.75 / 8);
+    color: var(--color-yellow-main);
+    text-decoration-line: underline;
+    border: none;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(17 / 14);
+    }
+
+    &:hover {
+      color: var(--color-green-button);
+    }
+
+    &:focus {
+      color: var(--color-white-button);
+    }
+
+    &:disabled {
+      color: var(--color-grey-main);
+    }
+  }
+}
+
+.arrow-one {
+  stroke: currentColor;
+  fill: none;
+  position: relative;
+  top: 1px;
+  margin-left: 2px;
+}
+
+.arrow-two {
+  stroke: currentColor;
+  width: 42px;
+
+  padding: 0;
+  height: 15px;
+
+  color: var(--color-black-main);
+  background-color: transparent;
+  border: none;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform-origin: 0;
+    transform: scaleX(1.25);
+
+    cursor: pointer;
+  }
+
+  &:focus {
+    transform-origin: 0;
+    transform: scale(1.25);
+
+    cursor: pointer;
+  }
+}
+
+// кнопка и иконка - закрытие модального окна
+.modal-button-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  transition-property: transform, color;
+  transition-duration: 250ms;
+  &:hover,
+  &:focus {
+    background-color: var(--color-yellow-main);
+    transform: scale(1.2);
+  }
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    top: 15px;
+    right: 15px;
+  }
+}
+.modal__icon-button {
+  height: 19px;
+  width: 19px;
+}

@@ -1,0 +1,42 @@
+// utils
+@import './utils/vars';
+//base
+@import './base/reset';
+@import './base/common';
+@import './base/section';
+@import './base/container';
+@import './base/buttons-and-links';
+
+//components
+@import './components/header';
+@import './components/hero';
+@import './components/header-mobile-menu';
+
+@import './components/products';
+
+@import './components/about';
+
+@import './components/advantages';
+
+@import './components/gallery-customers-background';
+@import './components/gallery';
+
+@import './components/customer-reviews';
+
+@import './components/contacts';
+
+@import './components/footer';
+
+//layouts
+@import './layouts/page-header';
+@import './layouts/page-main';
+@import './layouts/page-footer';
+
+@import './layouts/read-more';
+@import './layouts/our-location';
+@import './layouts/franchise';
+
+@import './layouts/buy-now';
+@import './layouts/backdrop';
+@import './layouts/read-more';
+@import './layouts/ingridients';
